@@ -70,7 +70,7 @@ Learning_Dashboard/
 
 🚀 How to Run Locally
 1. Clone Repository
-git clone https://github.com/yourusername/Learning_Dashboard.git
+git clone https://github.com/Khushi-Hebballi-18/_Personalized_Learning_Website.git
 cd Learning_Dashboard
 
 2. Start Backend
