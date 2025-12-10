@@ -1,0 +1,403 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(135deg, #FFDEE9, #B5FFFC);
+  color: #333;
+}
+
+/* Header */
+header {
+  background: linear-gradient(90deg, #667eea, #764ba2);
+  color: white;
+  padding: 20px;
+  font-size: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+
+  /* ADDED FOR THEME BUTTON */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Theme Toggle Container */
+.theme-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.theme-label {
+  font-size: 1rem;
+  font-weight: 500;
+  color: white;
+}
+
+.theme-toggle {
+  background: none;
+  border: none;
+  font-size: 1.7rem;
+  cursor: pointer;
+  color: white;
+  transition: transform 0.2s ease;
+}
+
+.theme-toggle:hover {
+  transform: scale(1.15);
+}
+
+/* Layout */
+.container {
+  display: flex;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 220px;
+  background: #1f2a38;
+  min-height: 100vh;
+  padding: 20px;
+  position: sticky;
+  top: 0;
+}
+
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar ul li {
+  margin: 20px 0;
+}
+
+.sidebar ul li a {
+  color: #ecf0f1;
+  text-decoration: none;
+  font-size: 1.1rem;
+  padding: 10px;
+  display: block;
+  border-radius: 8px;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.sidebar ul li a:hover {
+  background: #4a90e2;
+  transform: scale(1.05);
+}
+
+/* Main content */
+.main-content {
+  flex: 1;
+  padding: 30px;
+}
+
+/* Cards */
+.card {
+  background: #ffffffcc;
+  padding: 25px;
+  margin: 20px 0;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+}
+
+/* Progress Bar */
+.progress-bar {
+  background: #ddd;
+  border-radius: 20px;
+  overflow: hidden;
+  height: 25px;
+  margin: 15px 0;
+}
+
+.progress {
+  background: linear-gradient(90deg, #00c6ff, #0072ff);
+  color: white;
+  text-align: center;
+  line-height: 25px;
+  border-radius: 20px;
+  transition: width 0.5s ease-in-out;
+  font-weight: bold;
+}
+
+/* To-Do */
+.todo-input {
+  display: flex;
+  margin-top: 10px;
+}
+
+.todo-input input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 10px 0 0 10px;
+  border: 1px solid #ccc;
+  outline: none;
+}
+
+.todo-input button {
+  background: linear-gradient(90deg, #43e97b, #38f9d7);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 0 10px 10px 0;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.todo-input button:hover {
+  background: linear-gradient(90deg, #38f9d7, #43e97b);
+  transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+  background: #2c3e50;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 20px;
+  box-shadow: 0 -2px 8px rgba(0,0,0,0.2);
+}
+
+/* ---------------- AUTH PAGES (LOGIN & SIGNUP) ---------------- */
+
+.auth-body {
+  background: linear-gradient(135deg, #FFDEE9, #B5FFFC);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.auth-card {
+  width: 350px;
+  background: rgba(255, 255, 255, 0.35);
+  padding: 35px;
+  border-radius: 20px;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+  text-align: center;
+  animation: slideUp 0.6s ease-out;
+}
+
+.auth-card h2 {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.auth-subtext {
+  margin-bottom: 25px;
+  color: #555;
+  font-size: 0.9rem;
+}
+
+.auth-input {
+  display: flex;
+  align-items: center;
+  background: rgba(255,255,255,0.7);
+  padding: 10px;
+  border-radius: 10px;
+  margin: 10px 0;
+  border: 1px solid rgba(0,0,0,0.1);
+}
+
+.auth-input span {
+  margin-right: 10px;
+  font-size: 1.1rem;
+}
+
+.auth-input input {
+  width: 100%;
+  border: none;
+  background: transparent;
+  outline: none;
+  font-size: 1rem;
+}
+
+.auth-btn {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(90deg, #43e97b, #38f9d7);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  margin-top: 15px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: transform 0.2s ease;
+}
+
+.auth-btn:hover {
+  transform: scale(1.05);
+}
+
+.error-msg {
+  color: red;
+  margin-top: 10px;
+}
+
+/* Animation */
+@keyframes slideUp {
+  from {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+/* ---------------- DARK MODE ---------------- */
+
+body.dark-mode {
+  background: linear-gradient(135deg, #1e1e1e, #2d2d2d);
+  color: #f5f5f5;
+}
+
+/* Dark Mode - Header */
+body.dark-mode header {
+  background: linear-gradient(90deg, #3a3a3a, #1f1f1f);
+  color: #fff;
+}
+
+/* Dark Sidebar */
+body.dark-mode .sidebar {
+  background: #0f0f0f;
+}
+
+body.dark-mode .sidebar ul li a {
+  color: #e0e0e0;
+}
+
+body.dark-mode .sidebar ul li a:hover {
+  background: #333;
+  color: white;
+}
+
+/* Dark Cards & Text */
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode p,
+body.dark-mode li {
+  color: #f8f8f8;
+}
+
+body.dark-mode .card {
+  background: rgba(255,255,255,0.05);
+  color: #f8f8f8;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+}
+
+/* Dark Mode Progress Bar */
+body.dark-mode .progress-bar {
+  background: #3a3a3a;
+}
+
+body.dark-mode .progress {
+  background: linear-gradient(90deg, #00eaff, #0088ff);
+  color: #fff;
+}
+
+/* To-Do Input in Dark Mode */
+body.dark-mode .todo-input input {
+  background: #222;
+  color: #fff;
+  border: 1px solid #555;
+}
+
+body.dark-mode #todo-list li {
+  color: #fff;
+}
+
+/* Dark Mode Footer */
+body.dark-mode footer {
+  background: #111;
+  color: #bbb;
+}
+
+/* Dark Mode Theme Button */
+body.dark-mode .theme-label,
+body.dark-mode .theme-toggle {
+  color: #fff;
+}
+/* ---------- Profile Page Styles ---------- */
+
+.profile-grid {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 20px;
+  align-items: start;
+}
+
+.profile-photo-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.avatar-preview {
+  width: 140px;
+  height: 140px;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.9);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+  overflow: hidden;
+}
+
+.avatar-placeholder {
+  font-size: 4rem;
+  color: #666;
+}
+
+/* file input styling */
+.profile-photo-card input[type="file"] {
+  width: 100%;
+  padding: 6px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background: white;
+  cursor: pointer;
+}
+
+/* profile form */
+.profile-form label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: 500;
+  color: #333;
+}
+
+.profile-form input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+  margin-top: 6px;
+}
+
+/* responsive */
+@media (max-width: 800px) {
+  .profile-grid {
+    grid-template-columns: 1fr;
+  }
+  .sidebar {
+    display: none; /* optional: hide sidebar on small screens */
+  }
+}

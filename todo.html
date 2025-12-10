@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>To-Do - Learning Dashboard</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body onload="checkLogin(); loadProfileIntoDashboard()">
+  <header>
+    <h1>📚 My Learning Dashboard</h1>
+    <div class="theme-container">
+      <span class="theme-label">Theme</span>
+      <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
+    </div>
+  </header>
+
+  <div class="container">
+    <nav class="sidebar">
+      <ul>
+        <li><a href="index.html">🏠 Dashboard</a></li>
+        <li><a href="profile.html">👤 Profile</a></li>
+        <li><a href="courses.html">📖 Courses</a></li>
+        <li><a href="progress.html">📊 Progress</a></li>
+        <li><a href="todo.html">✅ To-Do</a></li>
+        <li><a href="login.html" onclick="logout()">🔐 Logout</a></li>
+      </ul>
+    </nav>
+
+    <main class="main-content">
+      <section class="card">
+        <h2>To-Do Tasks</h2>
+        <ul id="todo-list">
+          <li>Finish Math Assignment<button onclick="this.parentNode.remove()">❌</button></li>
+          <li>Read Science Chapter 3<button onclick="this.parentNode.remove()">❌</button></li>
+        </ul>
+
+        <div class="todo-input">
+          <input type="text" id="new-task" placeholder="✍️ Add new task">
+          <button onclick="addTask()">Add</button>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <footer>
+    <p>© 2025 My School | Designed with Khushi</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
